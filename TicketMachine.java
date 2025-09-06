@@ -57,7 +57,26 @@ public class TicketMachine
             balance=balance+amount;
         }
     }
-
+    
+    public void affordable(int budget)
+    {
+        if(price > budget)
+        {
+            System.out.println(price + " Is too expensive for " + budget);
+        }
+        else
+        {
+            System.out.println( budget + " Is just right ");
+        }
+    }
+    
+    public int emptymachine()
+    {
+        int amounttoempty = total;
+        total = 0;
+        return amounttoempty;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -65,7 +84,9 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if(balance >= price) {
+        int amountlefttopay = price - balance;
+        if(amountlefttopay<=0)
+        {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
@@ -80,8 +101,7 @@ public class TicketMachine
             balance = balance - price;
         }
         else {
-            System.out.printf("You must insert at least %d more cents.%n",
-                              price - balance);
+            System.out.printf("You must insert at least "+ amountlefttopay+ " more cents.");
         }
     }
 
