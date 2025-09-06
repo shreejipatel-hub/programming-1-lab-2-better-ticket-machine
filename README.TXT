@@ -16,5 +16,8 @@ How to start this project: Create one or more TicketMachine objects.
 47)no the balance does not change after the error message.
 48)now that the condition is that amount is greater or equal to 0 the program takes 0 as a valid amount
 50)the effect in figures project with circle was visible and invisible which uses true or false condition which is perfect for it.
-51)
+51)in the naive ticketmachine the money inserted will be lost and doesnt matter the amount of money you enter the machine will print the ticket.
+    in the better ticket machine we have a condition which checks the price with the money inserted and when printed
+    will add the money to the total and remove that amount from balance which makes sure that the extra money will stay in the balance and if you did not 
+    enter enough money in the machine it will show an error message.
 
