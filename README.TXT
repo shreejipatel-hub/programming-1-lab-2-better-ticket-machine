@@ -37,5 +37,4 @@ How to start this project: Create one or more TicketMachine objects.
     the price field it will show 0. when you add int infront of price inside the contructor it sees it as another variable with the same name
     within the constructor the cost is assigned to this varible which is local not to the price field. the price field of the object was never initalized
     therefor it stayed 0.
-62)
     
